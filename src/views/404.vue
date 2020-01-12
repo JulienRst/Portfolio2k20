@@ -1,6 +1,6 @@
 <template>
-	<div class="page home">
-		Hello World
+	<div class="page error">
+		Hello 404
 	</div>
 </template>
 
@@ -8,11 +8,11 @@
 import { Vue, Component } from 'vue-property-decorator';
 
 @Component({
-	name: 'HomeComponent'
+	name: 'ErrorComponent'
 })
-export default class HomeComponent extends Vue {
+export default class ErrorComponent extends Vue {
 	public mounted () {
-		console.log('Hello there');
+		console.log('Hello Error');
 	}
 }
 </script>
