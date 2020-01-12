@@ -26,7 +26,7 @@
 			</section>
 		</div>
 		<div class="time">
-			95 - 20
+			95 - {{ currentYear }}
 		</div>
 	</div>
 </template>
@@ -51,11 +51,14 @@ import { Me } from '@/assets/images';
 export default class AboutComponent extends Vue {
 
 	public isMounted: boolean = false;
+	public currentYear: string = '19';
 
 	public titleValues: string[] = ['Hello There', 'General Kenobi'];
 
 	public mounted () {
 		window.setTimeout(() => { this.isMounted = true; }, 300);
+		const year = new Date();
+		this.currentYear = year.getFullYear().toString().substring(2, 4);
 	}
 
 	public beforeDestory () {
