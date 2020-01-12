@@ -1,0 +1,36 @@
+nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	ul {
+		li {
+			padding: 1rem;
+			cursor: pointer;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				bottom: 0.9rem;
+				left: 50%;
+				height: 1px;
+				background-color: $color-black;
+				transition: 0.2s ease-in-out;
+				transform: translateX(-50%);
+			}
+
+			&:hover::after {
+				width: calc(100% - 2rem);
+				transition: 0.2s ease-in-out;
+			}
+
+			&.active::after {
+				width: calc(100% - 2rem);
+				bottom: calc(100% - 0.9rem);
+				transition: 0.2s ease-in-out;
+			}
+		}
+	}
+}

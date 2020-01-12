@@ -1,0 +1,16 @@
+.row, .column {
+	display: flex;
+
+	.center {
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.row {
+	flex-direction: row;
+}
+
+.column {
+	flex-direction: column;
+}
