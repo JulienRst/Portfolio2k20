@@ -21,7 +21,9 @@
 			</section>
 		</div>
 		<div class="column about-column picture">
-			<img :src="profilePicture" alt="">
+			<section class="content">
+				<img :src="profilePicture" alt="">
+			</section>
 		</div>
 		<div class="time">
 			95 - 20
@@ -54,6 +56,10 @@ export default class AboutComponent extends Vue {
 
 	public mounted () {
 		window.setTimeout(() => { this.isMounted = true; }, 300);
+	}
+
+	public beforeDestory () {
+		this.isMounted = false;
 	}
 }
 </script>
