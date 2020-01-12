@@ -1,0 +1,84 @@
+.about {
+	$grid-width: 320px;
+	background-position-x: calc(-#{$grid-width} / 5 * 3);
+	background-size: $grid-width 1px;
+	background-image: linear-gradient(to left, rgba(grey, 0.4) 1px, transparent 1px);
+	padding-left: calc(#{$grid-width} / 5 * 2);
+
+	&.active {
+		.about-column {
+			opacity: 1;
+			transition: 0.5s;
+		}
+	}
+
+	.about-column {
+		width: $grid-width;
+		padding: 1rem;
+		opacity: 0;
+		transition: 0.5s;
+
+		&.social {
+			justify-content: flex-end;
+			padding-bottom: 10rem;
+			
+			a {
+				padding: 0.5rem 0;
+				font-size: 0.8rem;
+			}
+		}
+
+		&.picture {
+			padding-top: 8rem;
+			img {
+				width: 400px;
+				height: 400px;
+				filter: grayscale(1);
+				transition: 0.3s;
+				
+				&:hover {
+					filter: grayscale(0);
+					transition: 0.3s;
+				}
+			}
+		}
+
+		.content {
+			h1 {
+				font-size: 2rem;
+				cursor: default;
+				overflow: hidden;
+				height: 2.5rem;
+
+				span { 
+					display: block;
+					transition: 0.2s;
+
+					&:nth-child(2) {
+						font-style: italic;
+					}
+				}
+
+				&:hover {
+					span { 
+						transform: translateY(-2.5rem); 
+						transition: 0.2s;
+					}
+				}
+			}
+
+			article {
+				margin-bottom: 4rem;
+			}
+		}
+	}
+
+	.time {
+		position: absolute;
+		bottom: 2rem;
+		right: 2rem;
+		font-weight: bold;
+		font-size: 1.5rem;
+		letter-spacing: 0.3rem;
+	}
+}

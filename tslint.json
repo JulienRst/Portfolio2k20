@@ -17,6 +17,7 @@
     "quotemark": [true, "single"],
     "trailing-comma": false,
     "space-before-function-paren": true,
-    "no-console": false
+    "no-console": false,
+    "no-var-requires": false
   }
 }
