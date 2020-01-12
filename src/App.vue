@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+		<LogoComponent />
 		<MenuComponent />
 		<router-view />
 	</div>
@@ -8,10 +9,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import MenuComponent from '@/components/Menu.vue';
+import LogoComponent from '@/components/Logo.vue';
 
 @Component({
 	name: 'App',
-	components: { MenuComponent }
+	components: { MenuComponent, LogoComponent }
 })
 export default class App extends Vue {
 	public mounted () {

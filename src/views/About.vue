@@ -56,7 +56,7 @@ export default class AboutComponent extends Vue {
 	public titleValues: string[] = ['Hello There', 'General Kenobi'];
 
 	public mounted () {
-		window.setTimeout(() => { this.isMounted = true; }, 300);
+		window.setTimeout(() => { this.isMounted = true; }, 100);
 		const year = new Date();
 		this.currentYear = year.getFullYear().toString().substring(2, 4);
 	}
