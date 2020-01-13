@@ -37,10 +37,12 @@
 				font-size: 0.8rem;
 				padding-left: 0rem;
 				transition: 0.3s;
+				font-style: italic;
 
 				&:hover {
 					padding-left: 1rem;
 					transition: 0.3s;
+					color: $color-blue-klein;
 				}
 			}
 		}

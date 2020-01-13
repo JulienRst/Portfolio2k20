@@ -13,10 +13,10 @@ nav {
 			content: '';
 			position: absolute;
 			width: 0;
-			bottom: 0.9rem;
+			bottom: 0.8rem;
 			left: 50%;
-			height: 1px;
-			background-color: rgba($color-black, 0.5);
+			height: 2px;
+			background-color: $color-blue-klein;
 			transition: 0.2s ease-in-out;
 			transform: translateX(-50%);
 		}
@@ -26,10 +26,13 @@ nav {
 			transition: 0.2s ease-in-out;
 		}
 
-		&.router-link-exact-active::after {
-			width: calc(100% - 2rem);
-			bottom: calc(100% - 0.9rem);
-			transition: 0.2s ease-in-out;
+		&.router-link-exact-active {
+			// color: $color-blue-klein;
+			&::after {
+				width: calc(100% - 2rem);
+				bottom: calc(100% - 1rem);
+				transition: 0.2s ease-in-out;
+			}
 		}
 	}
 }
