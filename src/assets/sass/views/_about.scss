@@ -46,6 +46,7 @@
 		}
 
 		&.picture {
+			padding: 0;
 			padding-top: 8rem;
 			width: calc(2 * #{$grid-width});
 			img {
@@ -55,7 +56,7 @@
 				transition: 0.3s;
 				
 				&:hover {
-					filter: grayscale(0);
+					filter: grayscale(0.5);
 					transition: 0.3s;
 				}
 			}
