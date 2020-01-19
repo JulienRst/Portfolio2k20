@@ -13,13 +13,21 @@ const routes = [
 	},
 	{
 		path: '/projects',
-		name: 'projects',
-		component: () => import('@/views/Projects.vue')
-	},
-	{
-		path: '/project/:id',
-		name: 'project',
-		component: () => import('@/views/Project.vue')
+		name: 'project-root',
+		component: () => import('@/views/Project/index.vue'),
+		redirect: 'projects',
+		children: [
+			{
+				path: '/',
+				name: 'projects',
+				component: () => import('@/views/Project/Projects.vue'),
+			},
+			{
+				path: ':id',
+				name: 'project',
+				component: () => import('@/views/Project/Project.vue')
+			}
+		]
 	},
 	{
 		path: '/about',

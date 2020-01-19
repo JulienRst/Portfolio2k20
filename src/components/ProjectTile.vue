@@ -7,6 +7,7 @@
 					{{ project.name }}
 				</div>
 				<div class="stroke"></div>
+				<div class="date">{{ project.date }}</div>
 			</div>
 			<div class="sub row">
 				<div class="society">

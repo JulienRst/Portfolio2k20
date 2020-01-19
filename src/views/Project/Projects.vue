@@ -10,7 +10,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { projects } from '@/utils/fakeData';
 import ProjectTile from '@/components/ProjectTile.vue';
-import Project from '../models/project';
+import Project from '@/models/project';
 
 @Component({
 	name: 'ProjectsComponent',
@@ -36,7 +36,7 @@ export default class ProjectsComponent extends Vue {
 			window.setTimeout(() => { this.activeStyle --; }, (key + 1) * 200);
 		});
 		window.setTimeout(() => {
-			this.$router.push({ name: 'project', params: { id: project.slug }})
+			this.$router.push({ name: 'project', params: { id: project.slug }});
 		}, this.projects.length * 200 + 500);
 	}
 }

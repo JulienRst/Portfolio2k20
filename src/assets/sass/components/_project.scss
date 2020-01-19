@@ -72,14 +72,16 @@
 				flex-grow: 1;
 				transition: 0.3s;
 			}
+
+			.date {
+				margin-left: 1rem;
+				flex-shrink: 0;
+			}
 		}
 
 		.sub {
 			width: 100%;
 			justify-content: space-between;
-			.society {
-				
-			}
 
 			.tags {
 				.tag {
