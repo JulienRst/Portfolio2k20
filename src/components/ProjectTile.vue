@@ -33,9 +33,5 @@ export default class ProjectTile extends Vue {
 
 	@Prop({ required: true })
 	public active!: boolean;
-
-	public mounted () {
-		console.log('ProjectTile has been properly mounted');
-	}
 }
 </script>
