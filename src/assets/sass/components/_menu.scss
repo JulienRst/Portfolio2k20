@@ -17,6 +17,7 @@ nav {
 			left: 50%;
 			height: 2px;
 			background-color: $color-blue-klein;
+			opacity: 0.5;
 			transition: 0.2s ease-in-out;
 			transform: translateX(-50%);
 		}
