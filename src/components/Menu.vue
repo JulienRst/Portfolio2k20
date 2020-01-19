@@ -20,7 +20,7 @@ import { Component, Vue } from 'vue-property-decorator';
 	data: () => {
 		return {
 			itemsNavigation: [
-				{ name: 'Projects', to: 'project' },
+				{ name: 'Projects', to: 'projects' },
 				{ name: 'About me', to: 'about' }
 			]
 		};

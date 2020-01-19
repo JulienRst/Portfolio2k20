@@ -1,5 +1,5 @@
 <template>
-	<div class="ctn-project row">
+	<div class="ctn-project row" :class="{ active: active }">
 		<div class="key">0{{ project.id }}</div>
 		<div class="content column">
 			<div class="ctn-title row">
@@ -30,6 +30,9 @@ import Project from '@/models/project';
 export default class ProjectTile extends Vue {
 	@Prop({ required: true })
 	public project!: Project;
+
+	@Prop({ required: true })
+	public active!: boolean;
 
 	public mounted () {
 		console.log('ProjectTile has been properly mounted');
