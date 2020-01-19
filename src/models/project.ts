@@ -6,6 +6,7 @@ export default class Project {
 	public society: string;
 	public colors: string[];
 	public image: string;
+	public slug: string;
 
 	constructor (data: any) {
 		this.id = data.id;
@@ -15,5 +16,6 @@ export default class Project {
 		this.society = data.society;
 		this.colors = data.colors;
 		this.image = data.image;
+		this.slug = data.slug;
 	}
 }

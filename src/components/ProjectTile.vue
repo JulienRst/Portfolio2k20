@@ -1,5 +1,5 @@
 <template>
-	<div class="ctn-project row" :class="{ active: active }">
+	<div class="ctn-project row" :class="{ active: active }" @click="$emit('go')">
 		<div class="key">0{{ project.id }}</div>
 		<div class="content column">
 			<div class="ctn-title row">
