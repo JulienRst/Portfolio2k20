@@ -15,16 +15,16 @@
 
 	&:hover {
 		transition: 0.5s;
-		transform: translateX(2rem);
+		transform: translateX(2.5rem);
 
 		.key::before {
 			transition: 0.25s;
-			left: -1rem;
+			left: -1.25rem;
 		}
 
 		.key::after {
 			transition: 0.5s;
-			left: -2rem;
+			left: -2.5rem;
 		}
 
 		.content .ctn-title .title::after {
