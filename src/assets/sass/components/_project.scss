@@ -13,18 +13,20 @@
 		transition: 0.5s;
 	}
 
+	$transi-left: 1.5rem;
+
 	&:hover {
 		transition: 0.5s;
-		transform: translateX(2.5rem);
+		transform: translateX($transi-left);
 
 		.key::before {
 			transition: 0.25s;
-			left: -1.25rem;
+			left: calc(-#{$transi-left} / 2);
 		}
 
 		.key::after {
 			transition: 0.5s;
-			left: -2.5rem;
+			left: calc(-#{$transi-left});
 		}
 
 		.content .ctn-title .title::after {
@@ -47,17 +49,21 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			color: $color-blue-klein;
-			opacity: 0.2;
-			z-index: -1;
+			// color: $color-blue-klein;
+			// opacity: 0.2;
+			// z-index: -1;
 		}
 
 		&::before {
 			transition: 0.25s;
+			z-index: -1;
+			color: $color-blue-klein-faded-2;
 		}
 
 		&::after {
 			transition: 0.5s;
+			z-index: -2;
+			color: $color-blue-klein-faded-1;
 		}
 	}
 
@@ -65,7 +71,7 @@
 		flex-grow: 1;
 
 		.ctn-title {
-			align-items: center;
+			align-items: baseline;
 			.title {
 				font-weight: bold;
 				font-size: 3rem;
@@ -100,6 +106,7 @@
 			.date {
 				margin-left: 1rem;
 				flex-shrink: 0;
+				font-weight: bold;
 			}
 		}
 
@@ -110,6 +117,7 @@
 			.tags {
 				.tag {
 					font-style: italic;
+					// font-weight: bold;
 					&:not(:last-child) {
 						margin-right: 0.5rem;
 					}
