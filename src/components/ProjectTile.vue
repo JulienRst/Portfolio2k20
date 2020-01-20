@@ -3,7 +3,7 @@
 		<div class="key">0{{ project.id }}</div>
 		<div class="content column">
 			<div class="ctn-title row">
-				<div class="title">
+				<div class="title" :data-text="project.name">
 					{{ project.name }}
 				</div>
 				<div class="stroke"></div>
