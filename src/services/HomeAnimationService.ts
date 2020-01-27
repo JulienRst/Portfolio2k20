@@ -12,7 +12,7 @@ class HomeAnimationService {
 	private triangles: THREE.Mesh[] = [];
 	private mainGroup: THREE.Group = new THREE.Group();
 
-	private pointGeometry: THREE.SphereBufferGeometry = new THREE.SphereBufferGeometry(0.05, 64, 64);
+	private pointGeometry: THREE.SphereBufferGeometry = new THREE.SphereBufferGeometry(0.01, 64, 64);
 	private pointMaterial: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({
 		color: 0x98A6E9,
 		side: THREE.DoubleSide
