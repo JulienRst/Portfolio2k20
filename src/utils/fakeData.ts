@@ -25,6 +25,8 @@ export const projects = [
 		society: '/////',
 		tags: ['VueJS', 'Three.js', 'TypeScript'],
 		date: '2019',
+		descriptions: [],
+		challenges: []
 	}
 ];
 
