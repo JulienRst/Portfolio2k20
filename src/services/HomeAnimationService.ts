@@ -7,6 +7,7 @@ class HomeAnimationService {
 	private scene: THREE.Scene = new THREE.Scene();
 	private container!: HTMLElement;
 	private timeout: number = -1;
+	private bindedResize: () => void;
 
 	private points: THREE.Mesh[] = [];
 	private triangles: THREE.Mesh[] = [];
@@ -18,10 +19,14 @@ class HomeAnimationService {
 		side: THREE.DoubleSide
 	});
 
+	private numberOfPoints = 40;
+	private delay = 100;
+
 	constructor () {
 		this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 		this.renderer.setClearColor(0xffffff, 0);
 		this.camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
+		this.bindedResize = this.resize.bind(this);
 	}
 
 	public init (container: HTMLElement) {
@@ -33,7 +38,13 @@ class HomeAnimationService {
 		this.initLight();
 		this.scene.add(this.mainGroup);
 		this.renderer.render(this.scene, this.camera);
-		window.addEventListener('resize', this.resize.bind(this));
+		window.addEventListener('resize', this.bindedResize);
+
+		for (let i = 0; i < this.numberOfPoints; i++) {
+			window.setTimeout(() => {
+				this.generateNewPoint();
+			}, i * this.delay);
+		}
 	}
 
 	public resize () {
@@ -73,10 +84,15 @@ class HomeAnimationService {
 			let normal = new THREE.Vector3(1, 1, 1);
 			normal = triangle.getNormal(normal);
 			triangleGeometry.faces.push(new THREE.Face3(0, 1, 2, normal));
-			this.triangles.push(new THREE.Mesh(triangleGeometry, new THREE.MeshNormalMaterial({ side: THREE.DoubleSide })));
+			this.triangles.push(
+				new THREE.Mesh(
+					triangleGeometry,
+					new THREE.MeshNormalMaterial({ transparent: true, opacity: 0.5, side: THREE.DoubleSide })
+				)
+			);
 			this.mainGroup.add(this.triangles[this.triangles.length - 1]);
 		}
-		this.mainGroup.add(mesh);
+		// this.mainGroup.add(mesh);
 	}
 
 	public animate () {
@@ -87,8 +103,9 @@ class HomeAnimationService {
 	}
 
 	public destroy () {
+		console.log('hello there');
 		cancelAnimationFrame(this.timeout);
-		window.removeEventListener('resize', this.resize);
+		window.removeEventListener('resize', this.bindedResize);
 	}
 }
 

@@ -1,5 +1,5 @@
 <template>
-	<div ref="container" class="ctn-home-animation" @click="add"></div>
+	<div ref="container" class="ctn-home-animation"></div>
 </template>
 
 <script lang="ts">
@@ -17,9 +17,9 @@ export default class HomeAnimation extends Vue {
 		}
 	}
 
-	public add () {
-		homeAnimationService.generateNewPoint();
-	}
+	// public add () {
+	// 	homeAnimationService.generateNewPoint();
+	// }
 
 	public beforeDestroy () {
 		homeAnimationService.destroy();
