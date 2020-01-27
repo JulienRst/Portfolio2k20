@@ -1,6 +1,6 @@
 <template>
-	<div class="page about row" :class="{ active: isMounted }">
-		<div class="column about-column center">
+	<div class="page about row grid-layout" :class="{ active: isMounted }">
+		<div class="column grid-column center">
 			<section class="content">
 				<h1><span v-for="(title, key) in titleValues" :key="key">{{ title }}</span></h1>
 				<article>
@@ -15,12 +15,12 @@
 				</article>
 			</section>
 		</div>
-		<div class="column about-column social">
+		<div class="column grid-column social">
 			<section class="content column">
 				<a :href="social.link" v-for="(social, key) in socials" :key="key" target="blank">{{ social.name }}</a>
 			</section>
 		</div>
-		<div class="column about-column picture">
+		<div class="column grid-column picture">
 			<section class="content">
 				<img :src="profilePicture" alt="">
 			</section>

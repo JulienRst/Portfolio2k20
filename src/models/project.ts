@@ -4,9 +4,9 @@ export default class Project {
 	public tags: string[];
 	public date: string;
 	public society: string;
-	public colors: string[];
-	public image: string;
 	public slug: string;
+	public descriptions: string[];
+	public challenges: string[];
 
 	constructor (data: any) {
 		this.id = data.id;
@@ -14,8 +14,8 @@ export default class Project {
 		this.tags = data.tags;
 		this.date = data.date;
 		this.society = data.society;
-		this.colors = data.colors;
-		this.image = data.image;
 		this.slug = data.slug;
+		this.descriptions = data.description;
+		this.challenges = data.challenges;
 	}
 }

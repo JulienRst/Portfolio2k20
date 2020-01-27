@@ -1,0 +1,10 @@
+.page.project {
+    .grid-column {
+        h1 {
+            font-size: 3rem;
+            margin: 4rem 0;
+            color: transparent;
+            -webkit-text-stroke: 1px $color-black;
+        }
+    }
+}

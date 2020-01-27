@@ -1,16 +1,5 @@
 .about {
-	$grid-width: 320px;
-	background-position-x: calc(-#{$grid-width} / 5 * 3);
-	background-size: $grid-width 0%;
-	background-image: linear-gradient(to left, rgba(grey, 0.4) 1px, transparent 1px);
-	padding-left: calc(#{$grid-width} / 5 * 2);
-	transition: background-size 1s ease-in;
-	background-repeat: repeat-x;
-
 	&.active {
-		background-size: $grid-width 100%;
-		transition: background-size 0.5s ease-in;
-
 		.about-column {
 			.content {
 				opacity: 1;
@@ -21,11 +10,8 @@
 		}
 	}
 
-	.about-column {
-		padding: 1rem;
+	.grid-column {
 		transition: 0.5s;
-		width: $grid-width;
-		overflow: hidden;
 		flex-shrink: 0;
 
 		&.social {
