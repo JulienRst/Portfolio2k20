@@ -14,9 +14,13 @@ export const projects = [
 			'The real challenge was to give the user an experiment where he can listen to one podcast and continue his journey within the app'
 		],
 		challenges: [
-			'This webapp was crafted with Vue.js and use TypeScript.Within the cool futures you can spot:',
-			'Neat animations, data interactions from Parse(you don’t want to know this), Facebook Login and HTMLAudioAPI'
-		]
+			'This webapp was crafted with Vue.js and use TypeScript. Within the cool futures you can spot :',
+			'Neat animations, data interactions from Parse (you don’t want to know this), Facebook Login and HTMLAudioAPI'
+		],
+		images: {
+			landing: '/assets/images/projects/sybel-landing.png',
+			details: '/assets/images/projects/sybel-player.png'
+		},
 	},
 	{
 		id: 2,
@@ -26,7 +30,11 @@ export const projects = [
 		tags: ['VueJS', 'Three.js', 'TypeScript'],
 		date: '2019',
 		descriptions: [],
-		challenges: []
+		challenges: [],
+		images: {
+			landing: '/assets/images/projects/sybel-landing.png',
+			details: '/assets/images/projects/sybel-player.png'
+		},
 	}
 ];
 

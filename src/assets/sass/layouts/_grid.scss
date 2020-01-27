@@ -15,5 +15,14 @@
 		width: $grid-width;
 		padding: 1rem;
 		overflow: hidden;
+		flex-shrink: 0;
+
+		&.double {
+			width: calc(2 * #{$grid-width});
+		}
+
+		&.no-gutter {
+			padding: 0;
+		}
 	}
 }

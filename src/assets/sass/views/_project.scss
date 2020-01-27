@@ -6,5 +6,11 @@
             color: transparent;
             -webkit-text-stroke: 1px $color-black;
         }
+
+        &.landing {
+            .image-viewer {
+                margin-top: 12rem;
+            }
+        }
     }
 }

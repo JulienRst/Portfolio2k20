@@ -20,7 +20,7 @@
 				<a :href="social.link" v-for="(social, key) in socials" :key="key" target="blank">{{ social.name }}</a>
 			</section>
 		</div>
-		<div class="column grid-column picture">
+		<div class="column grid-column picture double no-gutter">
 			<section class="content">
 				<img :src="profilePicture" alt="">
 			</section>

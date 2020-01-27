@@ -15,6 +15,9 @@
 				</p>
 			</section>
 		</div>
+		<div class="grid-column double no-gutter column landing">
+			<ImageViewerComponent :image="project.images.landing" />
+		</div>
 	</div>
 </template>
 
@@ -22,9 +25,11 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { getProject } from '@/utils/fakeData';
 import Project from '../../models/project';
+import ImageViewerComponent from '@/components/ImageViewer.vue';
 
 @Component({
-	name: 'ProjectComponent'
+	name: 'ProjectComponent',
+	components: { ImageViewerComponent }
 })
 export default class ProjectComponent extends Vue {
 	public isMounted: boolean = false;

@@ -34,9 +34,7 @@
 		}
 
 		&.picture {
-			padding: 0;
 			padding-top: 8rem;
-			width: calc(2 * #{$grid-width});
 			img {
 				width: 400px;
 				height: 400px;
