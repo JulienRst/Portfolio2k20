@@ -1,5 +1,5 @@
 {
-  "name": "Portfolio2k20",
+  "name": "portfolio2k20",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/three": "^0.103.2",
     "core-js": "^3.4.4",
     "three": "^0.112.1",
     "vue": "^2.6.10",
@@ -22,7 +23,7 @@
     "@vue/cli-service": "^4.1.0",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
-    "typescript": "~3.5.3",
+    "typescript": "3.7.2",
     "vue-template-compiler": "^2.6.10"
   },
   "browserslist": [
