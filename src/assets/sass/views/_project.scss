@@ -9,9 +9,10 @@
         }
 
         &.landing {
+            overflow: visible;
             .image-viewer {
                 margin-top: 12rem;
-                box-shadow: -5px 10px 25px rgba($color-black, 0.2);
+                box-shadow: 10px 10px 25px rgba($color-black, 0.3);
             }
         }
     }

@@ -1,7 +1,7 @@
 <template>
 	<div class="page project grid-layout row" :class="{ active: isMounted }">
 		<div class="grid-column">
-			<h1>#0{{project.id}} - {{project.name}}</h1>
+			<h1>0{{project.id}} - {{project.name}}</h1>
 			<section class="description">
 				<p v-for="(description, key) in project.descriptions" :key="key">
 					{{ description }}
@@ -24,7 +24,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { getProject } from '@/utils/fakeData';
-import Project from '../../models/project';
+import Project from '@/models/project';
 import ImageViewerComponent from '@/components/ImageViewer.vue';
 
 @Component({
