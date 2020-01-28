@@ -29,7 +29,7 @@
 
 		public mounted () {
 			const ref = this.$refs.imgviewer as HTMLElement;
-			ref.addEventListener('wheel', this.bindedHandleScroll);
+			ref.addEventListener('wheel', this.bindedHandleScroll, { passive: true });
 			window.addEventListener('resize', this.bindedHandleResize);
 			const img = this.$refs.img as HTMLImageElement;
 			this.maxOffset = img.height - ref.offsetHeight;
@@ -56,7 +56,7 @@
 		}
 
 		private handleScroll (event: WheelEvent) {
-			event.preventDefault();
+			// event.preventDefault();
 			this.offset -= event.deltaY;
 			this.checkBoundaries();
 		}

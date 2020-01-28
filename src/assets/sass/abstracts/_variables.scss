@@ -4,7 +4,7 @@ $font: 'Noto Sans';
 
 // Colors
 
-$color-light-grey: #DCDCDC;
+$color-light-grey: lighten(#DCDCDC, 10);
 $color-black: #121212;
 $color-blue-klein: #1F37FD;
 $color-blue-klein-faded-1: #B6BEE3;
@@ -13,4 +13,4 @@ $color-new-green: #00ffbf;
 
 // Grid
 
-$grid-width: 19vw;
+$grid-width: 20vw;

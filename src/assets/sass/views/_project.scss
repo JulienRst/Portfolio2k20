@@ -3,13 +3,15 @@
         h1 {
             font-size: 3rem;
             margin: 4rem 0;
-            color: transparent;
-            -webkit-text-stroke: 1px $color-black;
+            // color: transparent;
+            // -webkit-text-stroke: 1px $color-black;
+            font-weight: bold;
         }
 
         &.landing {
             .image-viewer {
                 margin-top: 12rem;
+                box-shadow: -5px 10px 25px rgba($color-black, 0.2);
             }
         }
     }
