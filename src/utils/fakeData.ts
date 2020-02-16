@@ -48,3 +48,16 @@ export const getProject = (slug: string): Project|null => {
 
 	return result;
 };
+
+export const getNextProject = (project: Project): Project => {
+	let result = projects[0];
+	projects.forEach((dataProject, key) => {
+		if (dataProject.id === project.id) {
+			if (projects.length - 1 >= key + 1) {
+				result = projects[key + 1];
+			}
+		}
+	});
+
+	return result;
+};

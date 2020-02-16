@@ -17,10 +17,6 @@ export default class HomeAnimation extends Vue {
 		}
 	}
 
-	// public add () {
-	// 	homeAnimationService.generateNewPoint();
-	// }
-
 	public beforeDestroy () {
 		homeAnimationService.destroy();
 	}
@@ -32,7 +28,7 @@ export default class HomeAnimation extends Vue {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: calc(100vh - 4rem);
 	cursor: pointer;
 	z-index: -1;
 }

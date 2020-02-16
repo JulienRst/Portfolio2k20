@@ -29,7 +29,7 @@
 
 		public mounted () {
 			const ref = this.$refs.imgviewer as HTMLElement;
-			ref.addEventListener('wheel', this.bindedHandleScroll, { passive: true });
+			ref.addEventListener('wheel', this.bindedHandleScroll);
 			window.addEventListener('resize', this.bindedHandleResize);
 			const img = this.$refs.img as HTMLImageElement;
 			this.maxOffset = img.height - ref.offsetHeight;
@@ -56,17 +56,21 @@
 		}
 
 		private handleScroll (event: WheelEvent) {
-			// event.preventDefault();
 			this.offset -= event.deltaY;
-			this.checkBoundaries();
+			if (!this.checkBoundaries()) {
+				event.preventDefault();
+			}
 		}
 
-		private checkBoundaries () {
+		private checkBoundaries (): boolean {
 			if (this.offset > 0) {
 				this.offset = 0;
+				return true;
 			} else if (this.offset < -this.maxOffset) {
 				this.offset = -this.maxOffset;
+				return true;
 			}
+			return false;
 		}
 	}
 </script>

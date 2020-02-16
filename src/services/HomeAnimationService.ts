@@ -40,6 +40,10 @@ class HomeAnimationService {
 		this.renderer.render(this.scene, this.camera);
 		window.addEventListener('resize', this.bindedResize);
 
+		this.points = [];
+		this.triangles = [];
+		this.mainGroup.children = [];
+
 		for (let i = 0; i < this.numberOfPoints; i++) {
 			window.setTimeout(() => {
 				this.generateNewPoint();
