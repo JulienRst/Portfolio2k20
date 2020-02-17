@@ -21,10 +21,9 @@
 			</div>
 		</div>
 		<div class="grid-row row">
-			<div class="grid-column double no-gutter column details">
+			<div class="grid-column triple no-gutter column details">
 				<img :src="project.images.details" alt="">
 			</div>
-			<div class="grid-column"></div>
 			<div class="grid-column column justify-end align-end">
 				<a class="external-link" href="https://google.com" target="_blank" data-text="Visit this site">Visit this site</a>
 			</div>

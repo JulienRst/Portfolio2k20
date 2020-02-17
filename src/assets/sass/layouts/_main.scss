@@ -44,7 +44,7 @@ a.external-link {
 
 	&:hover {
 		&::after {
-			height: 0;
+			width: calc(100% - 40px);
 			transition: 0.3s;
 		}
 

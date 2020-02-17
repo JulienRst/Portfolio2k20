@@ -11,6 +11,7 @@
         &.landing {
             overflow: visible;
             .image-viewer {
+                margin-left: 20px;
                 margin-top: 12rem;
                 box-shadow: 10px 10px 25px rgba($color-black, 0.3);
             }
@@ -18,7 +19,8 @@
 
         &.details {
             img {
-                width: 100%;
+                width: calc(2 * #{$grid-width});
+                margin-left: 20px;
             }
         }
     }

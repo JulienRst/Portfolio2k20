@@ -24,6 +24,10 @@
 		&.no-gutter {
 			padding: 0;
 		}
+
+		&.triple {
+			width: calc(3 * #{$grid-width});
+		}
 	}
 
 	.grid-row {
